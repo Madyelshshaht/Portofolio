@@ -1,0 +1,401 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family:cursive;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:white;
+    --primary-label:black;
+
+    --secondry-label:white;
+    --white-ball:white;
+    --black-ball:black;
+}
+
+body{
+    background:var(--primary-color);
+}
+
+#switch{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+label{
+    display: block;
+    width: 50px;
+    height: 30px;
+    background-color: lightgreen;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+
+}
+label::after{
+    content: '';
+    position: absolute;
+    background:var(--white-ball);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    transition: 0.5s;
+
+}
+#switch:checked + label:after{
+    background-color: var(--black-ball);
+    left: calc(100% - 25px);
+    
+}
+#switch:checked + label{
+    background-color:cyan;
+}
+
+label:active:after{
+    width: 27px;
+}
+
+/* switch bottom */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-item{
+    margin: 0px 10px;
+}
+.nav-item .nav-link{
+    color:black;
+    
+}
+.nav-item .nav-link:hover{
+    font-size: 18px;
+    font-weight: bold;
+    color:blue;
+    border-block-end: 1px solid black;
+}
+.navbar-toggler{
+    color: white;
+    border-color: white;
+    font-size: 25px;
+    margin-right: 20px;
+}
+.navbar-toggler:focus{
+box-shadow: none;
+}
+/* Home */
+.Home{
+    background:url(home-banner.png) no-repeat 0 90%;
+   
+}
+.Home .content :where(h1,h2,h4,div){
+    font-family: sans-serif;
+    
+}
+/* .content h4{
+    margin-right: 70px; 
+} */
+.content :is(h2){
+    font-weight: bold;
+}
+.content h2 span{
+    padding: 0px 13px;
+    letter-spacing: -10px;
+}
+.content h1{
+    font-size: 45px;
+    font-weight: bold;
+}
+.content h4{
+    font-size: 13px;
+    font-weight: bold;
+}
+.content .main-btn button{
+    padding: 0.3rem 1rem;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+    border: 3px solid lightblue;
+    border-radius: 6px;
+    margin: 0px 10px;
+}
+.content .main-btn button:hover{
+    background-color: blue;
+    color: white;
+    box-shadow: 4px 6px 10px black;
+    transition-duration: 0.5s;
+    
+}
+.content .main-btn:hover .active{
+    background-color: white;
+    color: black;
+}
+.content .main-btn .active{
+    padding: 0.3rem 1rem;
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    margin: 0px 10px;
+}
+.content .main-btn .active:hover {
+    background-color: blue;
+    color: white;
+    box-shadow: 4px 6px 10px black;
+    transition-duration: 0.5s;
+}
+.Home .image img{
+    width: 450px;
+}
+/* About */
+.About .image img{
+    width: 500px;
+}
+.About .content h2{
+    letter-spacing: 6px;
+    padding: 3px 0px;
+}
+/* Services */
+
+.Services .brands{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 10px;
+    
+}
+.Services .brands .single-brand:hover img{
+    filter: brightness(0.10);
+}
+.Services .brands img{
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    width: 120px;
+    height: 60px;
+    cursor: pointer;
+    
+}
+.Services .brands img:hover{
+   transform: scale(1.1);
+   color: black;
+   border: none;
+   box-shadow: 0 0 3px black;
+    
+}
+
+.Services .box{
+    background-color: rgb(243, 243, 243);
+    width: 260px;
+    height: 300px;
+    margin: auto;
+}
+
+.Services .box h1{
+    color: blue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+.content p span{
+    display: flex;
+    flex-flow: column;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer-box svg{
+    padding: 20px;
+    font-size: 30px;
+    margin-top: -10px;
+}
+.footer-box p{
+    display: flex;
+    flex-flow: column;
+    font-size: 17px;
+    font-weight: bold;
+    color: blue;
+}
+.footer-box p span{
+    display: flex;
+    flex-flow: column;
+    font-size: 10px;
+    color: black;
+}
+
+
+/* SERVICES-OFFERS */
+.services-offers .para{
+    width: 600px;
+    margin: auto;
+}
+.services-offers .card{
+    background-color: rgb(248, 248, 248);
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px 0px;
+    
+}
+.services-offers .card:hover{
+    background-color: rgb(255, 255, 255);
+    box-shadow: -5px 5px 10px black;
+    cursor: pointer;
+}
+
+.services-offers .card img{
+    width: 50px;
+}
+
+.services-offers .card h4{
+    font-size: 16px;
+    font-weight: bold;
+}
+.services-offers .card p{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* PORTOFOLIO */
+/* .portofolio .container .row{
+    background-color: black;
+} */
+
+.portofolio .container h4{
+    font-weight: bold;
+}
+.portofolio .container ul li{
+    list-style: none;
+    cursor: pointer;
+}
+.portofolio .container ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 6px;
+    font-size: 12px;
+}
+.portofolio .container ul li a:hover{
+    color:dodgerblue;
+}
+.cards.hide{
+    display: none;
+}
+.portofolio .container .row .col-lg-4 img{
+    cursor: pointer;
+    
+}
+.portofolio .container .row .col-lg-4 img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px lightblue;
+    
+}
+.portofolio .container .row .col-lg-4 h5{
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.portofolio .container .row .col-lg-4 p{
+    font-size: 10px;
+    font-family: sans-serif;
+} 
+
+/* client */
+.client .para{
+    width: 600px;
+    margin: auto;
+}
+
+.column-client{
+    background-color: rgb(246, 246, 246);
+    /* box-shadow: 5px 5px 10px rgb(46, 46, 46); */
+}
+
+.client-img img{
+    width: 110px;
+}
+.about-client{
+    margin: 7px 15px;
+}
+.about-client h4{
+    margin: 5px 0px 3px 0px;
+    font-weight: bold;
+    font-family: serif;
+}
+.about-client p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: serif;
+    
+}
+
+/* blog */
+
+.blog .container .area{
+    padding: 1rem 1.2rem;
+    background: url(subscribe-bg.png);
+    background-size: cover;
+    width: 95%;
+    margin: auto;
+}
+.blog .container .rectangle2 H1{
+    font-family: fantasy;
+}
+
+
+.input input{
+    padding: 0.5rem 0;
+    outline: none;
+    border: none;
+    border-radius:5px;
+    background-color: white;
+    
+}
+.input input:hover{
+    
+    transition-duration: 0.5s;
+    box-shadow: 5px 7px 17px black;
+}
+.input button{
+    border: none;
+    font-weight: bold;
+    color: white;
+    padding: 0.5rem 1rem;
+    outline: none;
+    background-color: red;
+    border-radius:10px;
+}
+.input button:hover{
+    background-color: green;
+    transition-duration: 0.5s;
+    box-shadow: 5px 5px 10px white;
+}
+
+/* End  */
+
+.end .icons svg{
+    margin: 5px 10px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+.end .icons svg:hover{
+    opacity: 1;
+}
+.end P SPAN{
+    color: blue;
+}
